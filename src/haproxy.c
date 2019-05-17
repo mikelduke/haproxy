@@ -931,7 +931,7 @@ static int get_old_sockets(const char *unixsocket)
 	struct msghdr msghdr;
 	struct iovec iov;
 	struct xfer_sock_list *xfer_sock = NULL;
-	struct timeval tv = { .tv_sec = 1, .tv_usec = 0 };
+	struct timeval tv = { .tv_sec = 10, .tv_usec = 0 }; //increase timeout for socket copy
 	int sock = -1;
 	int ret = -1;
 	int ret2 = -1;
